@@ -2,21 +2,55 @@
   "name": "myapp",
   "license": "0BSD",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
-    "start": "expo start --dev-client",
-    "android": "expo run:android",
-    "ios": "expo run:ios",
-    "web": "expo start --web"
+    "start": "bunx expo start",
+    "android": "bunx expo run:android",
+    "ios": "bunx expo run:ios",
+    "web": "bunx expo start --web",
+    "test": "bunx jest",
+    "lint":"eslint src --ext .ts,.tsx",
+    "format":"prettier --write ."
   },
   "dependencies": {
+    "@react-navigation/native": "^6.1.18",
+    "@react-navigation/native-stack": "^6.11.0",
+    "@reduxjs/toolkit": "^2.6.1",
+    "axios": "^1.8.4",
     "expo": "~52.0.43",
     "expo-status-bar": "~2.0.1",
     "react": "18.3.1",
-    "react-native": "0.76.9"
+    "react-native": "0.76.9",
+    "react-native-gesture-handler": "^2.25.0",
+    "react-native-reanimated": "^3.17.2",
+    "react-native-safe-area-context": "^5.3.0",
+    "react-native-screens": "^4.10.0",
+    "react-redux": "^9.1.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.20.0",
+    "@eslint/js": "^9.24.0",
+    "@testing-library/jest-native": "^5.4.3",
+    "@testing-library/react-native": "^13.2.0",
+    "@types/jest": "^29.5.14",
+    "@types/react": "^19.1.0",
+    "@types/react-native": "^0.73.0",
+    "@typescript-eslint/eslint-plugin": "^8.29.0",
+    "@typescript-eslint/parser": "^8.29.0",
+    "babel-jest": "^29.7.0",
+    "eslint": "^9.24.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-native": "^5.0.0",
+    "globals": "^16.0.0",
+    "jest": "^29.7.0",
+    "jest-expo": "^52.0.6",
+    "prettier": "^3.5.3",
+    "react-native-dotenv": "^3.4.11",
+    "react-test-renderer": "18.3.1",
+    "ts-jest": "^29.3.1",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.29.0"
   },
   "private": true
 }
