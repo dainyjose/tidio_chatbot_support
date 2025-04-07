@@ -154,7 +154,11 @@ declare module '@env' {
 
 ---
 
-## Author
+## 📖 Documentation
+
+For full setup instructions and details, check out the [Getting Started Guide](./GETTING_STARTED.md).
+
+## 🧑‍💻 Author
 
 **Dainy Jose**  
 [GitHub](https://github.com/dainyjose) | [LinkedIn](https://linkedin.com/in/dainyjose)
