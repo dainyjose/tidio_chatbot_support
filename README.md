@@ -34,8 +34,15 @@ npm install -g expo-cli
 ### Clone the Repo
 
 ```bash
-git clone https://github.com/your-username/myapp.git
-cd myapp
+git clone https://github.com/dainyjose/rn-expo-typescript-bare-template.git
+cd rn-expo-typescript-bare-template
+```
+
+**Renaming a project during cloning**
+
+```bash
+git clone https://github.com/dainyjose/rn-expo-typescript-bare-template.git new-repo-name
+cd new-repo-name
 ```
 
 ### Install Dependencies
