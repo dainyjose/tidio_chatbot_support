@@ -1,6 +1,16 @@
 # MyApp
 
-A React Native (Expo Bare Workflow) project using **TypeScript**, **Bun**, **ESLint**, **Prettier**, and **Jest** fully structured and scalable.
+This is a repository for a A React Native (Expo Bare Workflow) demonstrating chatbot support through integration with Tidio.
+
+## 🚀 Features
+
+Tidio Chat Integration: Seamlessly integrates the Tidio live chat and chatbot widget into the mobile application.
+
+**Customer Support:** Enables real-time customer support directly within the app, leveraging Tidio's live chat capabilities.
+
+**Automated Interactions:** Utilizes Tidio's chatbot features (including AI-powered Lyro) for automated responses, FAQ handling, and lead generation.
+
+**Customization:** Provides a foundation for customizing the Tidio widget's appearance and behavior within the React Native environment.
 
 ---
 
@@ -34,14 +44,14 @@ npm install -g expo-cli
 ### Clone the Repo
 
 ```bash
-git clone https://github.com/dainyjose/rn-expo-typescript-bare-template.git
-cd rn-expo-typescript-bare-template
+git clone https://github.com/dainyjose/tidio_chatbot_support.git
+cd tidio_chatbot_support
 ```
 
 **Renaming a project during cloning**
 
 ```bash
-git clone https://github.com/dainyjose/rn-expo-typescript-bare-template.git new-repo-name
+git clone https://github.com/dainyjose/tidio_chatbot_support.git new-repo-name
 cd new-repo-name
 ```
 
@@ -148,6 +158,7 @@ Create a `.env` file at the root:
 ```env
 API_URL=https://your-api.com
 APP_ENV=development
+OPENAI_API_KEY="openapikey"
 ```
 
 In `env.d.ts`:

@@ -8,8 +8,8 @@
     "ios": "bunx expo run:ios",
     "web": "bunx expo start --web",
     "test": "bunx jest",
-    "lint":"eslint src --ext .ts,.tsx",
-    "format":"prettier --write ."
+    "lint": "eslint src --ext .ts,.tsx",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@react-navigation/native": "^6.1.18",
@@ -21,9 +21,12 @@
     "react": "18.3.1",
     "react-native": "0.76.9",
     "react-native-gesture-handler": "^2.25.0",
+    "react-native-gifted-chat": "^2.8.1",
+    "react-native-keyboard-controller": "^1.17.5",
     "react-native-reanimated": "^3.17.2",
     "react-native-safe-area-context": "^5.3.0",
     "react-native-screens": "^4.10.0",
+    "react-native-webview": "^13.15.0",
     "react-redux": "^9.1.2"
   },
   "devDependencies": {
