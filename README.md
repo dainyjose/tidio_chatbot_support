@@ -1,180 +1,92 @@
-# MyApp
+# Tidio Chatbot Support
 
-This is a repository for a A React Native (Expo Bare Workflow) demonstrating chatbot support through integration with Tidio.
-
-## 🚀 Features
-
-Tidio Chat Integration: Seamlessly integrates the Tidio live chat and chatbot widget into the mobile application.
-
-**Customer Support:** Enables real-time customer support directly within the app, leveraging Tidio's live chat capabilities.
-
-**Automated Interactions:** Utilizes Tidio's chatbot features (including AI-powered Lyro) for automated responses, FAQ handling, and lead generation.
-
-**Customization:** Provides a foundation for customizing the Tidio widget's appearance and behavior within the React Native environment.
-
----
+This repository demonstrates how to use the **Tidio Chat Widget** inside a **mobile application** to provide real-time live chat and chatbot support.  
+The widget is embedded using a `WebView`, making it easy to bring Tidio’s customer support features into any React Native or Expo project.
 
 ## Table of Contents
-
-- [Getting Started](#getting-started)
-- [Project Structure](#project-structure)
-- [Scripts](#scripts)
+- [Description](#description)
+- [Features](#features)
 - [Tech Stack](#tech-stack)
-- [Linting & Formatting](#linting--formatting)
-- [Testing](#testing)
-- [Environment Variables](#environment-variables)
-- [Author](#author)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
 
----
 
-## Getting Started
+## Description
+The **Tidio Chatbot Support (Mobile)** project shows how to integrate Tidio’s chatbot into mobile apps.  
+Instead of limiting Tidio to websites, this example lets users **chat directly inside the app** via a simple embedded widget.
 
-### Prerequisites
+## Features
 
-- **Node.js** (only for installing Expo CLI globally)
-- **Bun** (v1.0+)
-- **Expo CLI** (for initializing and running projects)
 
-### Install Expo CLI
+- Tidio Chat Integration: Seamlessly integrates the Tidio live chat and chatbot widget into the mobile application.
 
-```bash
-npm install -g expo-cli
-```
+- **Customer Support:** Enables real-time customer support directly within the app, leveraging Tidio's live chat capabilities.
 
-### Clone the Repo
+- **Automated Interactions:** Utilizes Tidio's chatbot features (including AI-powered Lyro) for automated responses, FAQ handling, and lead generation.
 
-```bash
-git clone https://github.com/dainyjose/tidio_chatbot_support.git
-cd tidio_chatbot_support
-```
+- **Customization:** Provides a foundation for customizing the Tidio widget's appearance and behavior within the React Native environment.
 
-**Renaming a project during cloning**
+## Tech Stack
+- React Native / Expo
+- WebView (for embedding Tidio)
+- Tidio Chat Widget
 
-```bash
-git clone https://github.com/dainyjose/tidio_chatbot_support.git new-repo-name
-cd new-repo-name
-```
+## Prerequisites
+- [Node.js](https://nodejs.org/) and npm or yarn installed
+- React Native or Expo project setup
+- A [Tidio account](https://www.tidio.com/) to generate your unique script key
 
-### Install Dependencies
-
+## Installation
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/dainyjose/tidio_chatbot_support.git
+   cd tidio_chatbot_support
+   ```
+2. Install dependencies:
 ```bash
 bun install
 ```
+3. Run the project:
+   ```bash
+   bun expo run:android   # For Android
+   bun expo run:ios       # For iOS
+   bun expo start         # Metro bundler
+   ```
+## Usage
 
-### Run the App
-
+1. Add the Tidio script inside your WebView:
+   
 ```bash
-bun expo run:android   # For Android
-bun expo run:ios       # For iOS
-bun expo start         # Metro bundler
-```
+import React from "react";
+import { WebView } from "react-native-webview";
 
----
-
-## Project Structure
-
-```
-src/
-├── __tests__/         # Test component
-├── api/               # API calls
-├── components/        # Reusable components
-├── constants/         # App-wide constants
-├── context/           # Global contexts
-├── enums/             # TypeScript enums
-├── hooks/             # Custom hooks
-├── navigation/        # Navigation config
-├── redux/             # Redux store and slices
-├── screens/           # Screen components
-├── theme/             # Theming and styles
-├── types/             # Global types
-├── utils/             # Utility functions
-App.tsx                # Entry point
-
-```
-
----
-
-## Scripts
-
-```bash
-bun run dev            # Start Metro bundler
-bun run android        # Run on Android
-bun run ios            # Run on iOS
-bun run lint           # Run ESLint on src/
-bun run format         # Format code with Prettier
-bun run test           # Run unit tests
-```
-
----
-
-## Tech Stack
-
-- **React Native (bare)**
-- **Expo SDK**
-- **TypeScript**
-- **Bun** (JavaScript runtime)
-- **Jest** for unit testing
-- **ESLint + Prettier** for linting and formatting
-- **React Navigation**
-- **Redux Toolkit** (optional)
-
----
-
-## Linting & Formatting
-
-**Run ESLint:**
-
-```bash
-bun run lint
-```
-
-**Run Prettier:**
-
-```bash
-bun run format
-```
-
-Configured to ignore `node_modules`, `android/`, `ios/`, `build/`, etc.
-
----
-
-## Testing
-
-**Unit Testing Setup:**
-
-- Framework: `jest`
-- Render tests: `@testing-library/react-native`
-
-```bash
-bun run test
-```
-
----
-
-## Environment Variables
-
-Create a `.env` file at the root:
-
-```env
-API_URL=https://your-api.com
-APP_ENV=development
-OPENAI_API_KEY="openapikey"
-```
-
-In `env.d.ts`:
-
-```ts
-declare module '@env' {
-  export const API_URL: string;
-  export const APP_ENV: string;
+export default function TidioChat() {
+  return (
+    <WebView
+      source={{ uri: "https://yourwebsite.com/tidio.html" }}
+      style={{ flex: 1 }}
+    />
+  );
 }
+
 ```
+2. Replace the script key in your tidio.html file with your own:
+   ```bash
+   <script src="//code.tidio.co/YOUR_UNIQUE_KEY.js" async></script>
+    ```
+
+3. Launch the app and you’ll see the Tidio chat widget inside your mobile app.
 
 ---
 
-## 📖 Documentation
+## Related Repositories
 
-For full setup instructions and details, check out the [Getting Started Guide](./GETTING_STARTED.md).
+- [tidio-widget](https://github.com/dainyjose/tidio-widget..git)
+
+-----
+
 
 ## 🧑‍💻 Author
 
